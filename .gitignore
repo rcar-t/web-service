@@ -4,3 +4,4 @@ gradlew.bat
 .idea/
 .DS_Store
 gradle/
+build/
