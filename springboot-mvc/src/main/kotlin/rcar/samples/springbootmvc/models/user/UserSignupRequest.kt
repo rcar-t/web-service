@@ -1,4 +1,4 @@
-package kotlin.rcar.samples.springbootmvc.data
+package kotlin.rcar.samples.springbootmvc.models.user
 
 data class UserSignupRequest(
     val email: String,

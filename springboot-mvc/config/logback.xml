@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration scan="true" scanPeriod="30 seconds">
+
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <Pattern>
+                %d{dd/MM HH:mm:ss.SSS} [%green(%t)] %highlight(%-5level) %yellow(%logger{36}) - %msg%n
+            </Pattern>
+        </encoder>
+    </appender>
+
+    <logger name="aero.airlab" level="debug" additivity="false">
+        <appender-ref ref="CONSOLE"/>
+    </logger>
+
+    <logger name="org.springframework.web.reactive.function.server.*" level="trace" additivity="false">
+        <appender-ref ref="CONSOLE"/>
+    </logger>
+
+    <logger name="org.springframework.data.elasticsearch.client.WIRE" level="trace" additivity="false">
+        <appender-ref ref="CONSOLE"/>
+    </logger>
+
+    <root level="info">
+        <appender-ref ref="CONSOLE"/>
+    </root>
+
+</configuration>

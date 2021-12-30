@@ -1,0 +1,33 @@
+
+
+plugins {
+    id "org.jetbrains.kotlin.jvm"
+    id "org.jetbrains.dokka"
+    id 'org.springframework.boot' version "${dep_version_spring_boot}"
+    id 'io.spring.dependency-management' version "1.0.11.RELEASE"
+    id 'org.jetbrains.kotlin.plugin.spring' version "1.6.10"
+}
+
+group = 'rcar.samples'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '17'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation "org.springframework.boot:spring-boot-starter-web:${dep_version_spring_boot}"
+    implementation "org.springframework.boot:spring-boot-starter-security:${dep_version_spring_boot}"
+    implementation "org.springframework.data:spring-data-elasticsearch:${dep_version_spring_data}"
+    implementation "com.fasterxml.jackson.module:jackson-module-kotlin"
+    implementation "org.jetbrains.kotlin:kotlin-reflect"
+    implementation "io.jsonwebtoken:jjwt:${dep_version_jwt}"
+    implementation "io.github.microutils:kotlin-logging:${dep_version_klogging}"
+    implementation "co.elastic.clients:elasticsearch-java:${dep_version_es_java}"
+    testImplementation "org.springframework.boot:spring-boot-starter-test:${dep_version_spring_boot}"
+}
+
+test {
+    useJUnitPlatform()
+}

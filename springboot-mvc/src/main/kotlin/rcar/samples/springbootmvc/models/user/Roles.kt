@@ -1,3 +1,5 @@
 package kotlin.rcar.samples.springbootmvc.models.user
 
-data class Roles()
+enum class Roles {
+    ADMIN, USER
+}
